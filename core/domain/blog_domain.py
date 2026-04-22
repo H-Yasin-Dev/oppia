@@ -1,4 +1,4 @@
-l# coding: utf-8
+# coding: utf-8
 #
 # Copyright 2021 The Oppia Authors. All Rights Reserved.
 #
@@ -854,6 +854,13 @@ class BlogPostReadEventLogEntry:
     """Domain object for a blog post read event log entry."""
 
     def __init__(self, blog_post_id, created_on):
+        """Initializes a BlogPostReadEventLogEntry domain object.
+
+        Args:
+            blog_post_id: str. The unique ID of the blog post that was read.
+            created_on: datetime.datetime. The timestamp when the read event
+                occurred.
+        """
         self.blog_post_id = blog_post_id
         self.created_on = created_on
 
@@ -872,6 +879,14 @@ class BlogPostViewedEventLogEntry:
     """Domain object for a blog post viewed event log entry."""
 
     def __init__(self, blog_post_id, user_id, created_on):
+        """Initializes a BlogPostViewedEventLogEntry domain object.
+
+        Args:
+            blog_post_id: str. The unique ID of the blog post that was viewed.
+            user_id: str. The ID of the user who viewed the blog post.
+            created_on: datetime.datetime. The timestamp when the view event
+                occurred.
+        """
         self.blog_post_id = blog_post_id
         self.user_id = user_id
         self.created_on = created_on
